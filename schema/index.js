@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const mongoConfig = require('../constants/mongoConfig');
 const UserModel = require('./user.schema');
+const RatingModel = require("./rating.schema")
 
 const connectDb = () => {
   return mongoose.connect(process.env.DB || mongoConfig.url, {
@@ -9,5 +10,5 @@ const connectDb = () => {
   });
 };
 
-module.exports = {connectDb,UserModel}
+module.exports = {connectDb,UserModel,RatingModel}
 

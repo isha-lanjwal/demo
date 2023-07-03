@@ -15,6 +15,7 @@ app.set('port', PORT);
 app.use(bodyParser.json({ limit: '20mb' }));
 
 app.use(serverConfig.baseUrl + 'users', routes.user);
+app.use(serverConfig.baseUrl + 'rating', routes.rating);
 
 connectDb()
     .then(() => {
