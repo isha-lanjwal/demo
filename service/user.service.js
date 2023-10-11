@@ -1,5 +1,5 @@
-const { UserModel } = require('../schema');
-const responseCode = require('../constants/responseCode');
+import {UserModel} from '../schema/index.js';
+import responseCode from "../constants/responseCode.js";
 
 class UserService {
     static addUser(user_body) {
@@ -204,4 +204,4 @@ class UserService {
     }
 }
 
-module.exports = UserService
+export default UserService

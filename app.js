@@ -1,13 +1,11 @@
-const serverConfig = require('./constants/serverConfig');
+import  serverConfig  from '../demo/constants/serverConfig.js';
 // const dotend = require('dotenv/config');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const express = require('express');
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import express from 'express';
 // const mongoose = require('mongoose');
-const { connectDb } = require('./schema');
-const routes = require('./routes');
-const responseCode = require('./constants/responseCode');
-
+import {connectDb}  from './schema/index.js';
+import  routes  from './routes/index.js';
 const app = express();
 const PORT = process.env.PORT || serverConfig.port;
 app.use(cors());
@@ -42,4 +40,4 @@ connectDb()
 //         + " connecting to database.");   
 // })
 
-module.exports =  app;
+export default app;

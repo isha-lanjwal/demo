@@ -1,4 +1,4 @@
-const user = require('./user.route');
-const rating = require("./rating.route")
+import user from './user.route.js'
+import rating from "./rating.route.js";
 
-module.exports = {user,rating}
+export default {user,rating}

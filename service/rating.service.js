@@ -1,5 +1,5 @@
-const { RatingModel, UserModel } = require('../schema');
-const responseCode = require('../constants/responseCode');
+import { RatingModel, UserModel } from '../schema/index.js';
+import responseCode  from '../constants/responseCode.js';
 
 class RatingService {
     static addRating(req_body) {
@@ -81,4 +81,4 @@ class RatingService {
     }
 }
 
-module.exports = RatingService
+export default RatingService

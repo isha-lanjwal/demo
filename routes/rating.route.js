@@ -1,6 +1,5 @@
-const RatingService = require('../service/rating.service');
-const responseCode = require('../constants/responseCode');
-const express = require('express');
+import RatingService from '../service/rating.service.js';
+import express from 'express';
 const router = express.Router();
 
 router.post('/', async (req, res, next) => {
@@ -40,4 +39,4 @@ router.post('/', async (req, res, next) => {
     }
   
   });
-module.exports = router;
+export default router;

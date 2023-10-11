@@ -1,6 +1,5 @@
-const UserService = require('../service/user.service');
-const responseCode = require('../constants/responseCode');
-const express = require('express');
+import UserService from '../service/user.service.js';
+import express from 'express';
 const router = express.Router();
 
 router.post('/', async (req, res, next) => {
@@ -76,4 +75,4 @@ router.put('/:id',async (req,res,next) => {
   }
 });
 
-module.exports = router;
+export default router;

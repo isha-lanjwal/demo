@@ -14,4 +14,4 @@ const responseCode = {
         422: "UNPROCESSABLE_ENTITY"
 
 };
-module.exports = responseCode;
+export default responseCode;

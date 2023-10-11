@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const mongoConfig = require('../constants/mongoConfig');
-const UserModel = require('./user.schema');
-const RatingModel = require("./rating.schema")
+import mongoose from 'mongoose';
+import mongoConfig  from '../constants/mongoConfig.js';
+import UserModel from './user.schema.js';
+import RatingModel from "./rating.schema.js";
 
 const connectDb = () => {
   return mongoose.connect(process.env.DB || mongoConfig.url, {
@@ -10,5 +10,5 @@ const connectDb = () => {
   });
 };
 
-module.exports = {connectDb,UserModel,RatingModel}
+export {connectDb,UserModel,RatingModel}
 

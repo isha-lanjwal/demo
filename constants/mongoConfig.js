@@ -4,6 +4,6 @@ const mongoConfig = {
     "database": "demo",
     "url": "mongodb://localhost:27017/demo"
 }
-
-module.exports =  mongoConfig;
+export default mongoConfig;
+ 
 
